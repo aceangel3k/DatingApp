@@ -1,0 +1,883 @@
+commit ab93789bc1fc4479259632d88e8f6057d13d0c07
+Author: Angel Espiritu <angelespiritu@gmail.com>
+Date:   Wed Dec 11 18:03:07 2019 -0800
+
+    End of Section 9
+
+diff --git a/DatingApp-SPA/package-lock.json b/DatingApp-SPA/package-lock.json
+index 5633aef..8378f95 100644
+--- a/DatingApp-SPA/package-lock.json
++++ b/DatingApp-SPA/package-lock.json
+@@ -76,6 +76,44 @@
+         "webpack-sources": "1.4.3",
+         "webpack-subresource-integrity": "1.1.0-rc.6",
+         "worker-plugin": "3.2.0"
++      },
++      "dependencies": {
++        "terser-webpack-plugin": {
++          "version": "1.4.1",
++          "resolved": "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-1.4.1.tgz",
++          "integrity": "sha512-ZXmmfiwtCLfz8WKZyYUuuHf3dMYEjg8NrjHMb0JqHVHVOSkzp3cW2/XG1fP3tRhqEqSzMwzzRQGtAPbs4Cncxg==",
++          "dev": true,
++          "requires": {
++            "cacache": "^12.0.2",
++            "find-cache-dir": "^2.1.0",
++            "is-wsl": "^1.1.0",
++            "schema-utils": "^1.0.0",
++            "serialize-javascript": "^1.7.0",
++            "source-map": "^0.6.1",
++            "terser": "^4.1.2",
++            "webpack-sources": "^1.4.0",
++            "worker-farm": "^1.7.0"
++          },
++          "dependencies": {
++            "find-cache-dir": {
++              "version": "2.1.0",
++              "resolved": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-2.1.0.tgz",
++              "integrity": "sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==",
++              "dev": true,
++              "requires": {
++                "commondir": "^1.0.1",
++                "make-dir": "^2.0.0",
++                "pkg-dir": "^3.0.0"
++              }
++            },
++            "source-map": {
++              "version": "0.6.1",
++              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
++              "integrity": "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==",
++              "dev": true
++            }
++          }
++        }
+       }
+     },
+     "@angular-devkit/build-optimizer": {
+@@ -7984,6 +8022,11 @@
+       "resolved": "https://registry.npmjs.org/ngx-bootstrap/-/ngx-bootstrap-5.2.0.tgz",
+       "integrity": "sha512-fh+OmaEdxCZnVLQFLqexdw4Xv0Lp2Ueq7un52gF26lTENhTAypGWgf2c92HXzbp4W/B0tnwIZ9mzQPwdDMH91w=="
+     },
++    "ngx-gallery": {
++      "version": "5.10.0",
++      "resolved": "https://registry.npmjs.org/ngx-gallery/-/ngx-gallery-5.10.0.tgz",
++      "integrity": "sha512-+2DnsBfkIzNQoReOHf6+OMf06+qyQQMyVVN4iQAtL0+KykjVqDZiBwLQtmwajDWMGph6O1HNKLrqTcmgqw+d2A=="
++    },
+     "nice-try": {
+       "version": "1.0.5",
+       "resolved": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz",
+@@ -10797,16 +10840,16 @@
+       }
+     },
+     "terser-webpack-plugin": {
+-      "version": "1.4.1",
+-      "resolved": "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-1.4.1.tgz",
+-      "integrity": "sha512-ZXmmfiwtCLfz8WKZyYUuuHf3dMYEjg8NrjHMb0JqHVHVOSkzp3cW2/XG1fP3tRhqEqSzMwzzRQGtAPbs4Cncxg==",
++      "version": "1.4.3",
++      "resolved": "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-1.4.3.tgz",
++      "integrity": "sha512-QMxecFz/gHQwteWwSo5nTc6UaICqN1bMedC5sMtUc7y3Ha3Q8y6ZO0iCR8pq4RJC8Hjf0FEPEHZqcMB/+DFCrA==",
+       "dev": true,
+       "requires": {
+         "cacache": "^12.0.2",
+         "find-cache-dir": "^2.1.0",
+         "is-wsl": "^1.1.0",
+         "schema-utils": "^1.0.0",
+-        "serialize-javascript": "^1.7.0",
++        "serialize-javascript": "^2.1.2",
+         "source-map": "^0.6.1",
+         "terser": "^4.1.2",
+         "webpack-sources": "^1.4.0",
+@@ -10824,6 +10867,12 @@
+             "pkg-dir": "^3.0.0"
+           }
+         },
++        "serialize-javascript": {
++          "version": "2.1.2",
++          "resolved": "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-2.1.2.tgz",
++          "integrity": "sha512-rs9OggEUF0V4jUSecXazOYsLfu7OGK2qIn3c7IPBiffz32XniEp/TX9Xmc9LQfK2nQ2QKHvZ2oygKUGU0lG4jQ==",
++          "dev": true
++        },
+         "source-map": {
+           "version": "0.6.1",
+           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+diff --git a/DatingApp-SPA/package.json b/DatingApp-SPA/package.json
+index dfd5b4a..7cf6cf2 100644
+--- a/DatingApp-SPA/package.json
++++ b/DatingApp-SPA/package.json
+@@ -30,6 +30,7 @@
+     "bootswatch": "^4.4.1",
+     "font-awesome": "^4.7.0",
+     "ngx-bootstrap": "^5.2.0",
++    "ngx-gallery": "^5.10.0",
+     "rxjs": "~6.4.0",
+     "tslib": "^1.10.0",
+     "zone.js": "~0.9.1"
+diff --git a/DatingApp-SPA/src/app/_models/photo.ts b/DatingApp-SPA/src/app/_models/photo.ts
+new file mode 100644
+index 0000000..d379463
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_models/photo.ts
+@@ -0,0 +1,7 @@
++export interface Photo {
++    id: number;
++    url: string;
++    description: string;
++    dateAdded: Date;
++    isMain: boolean;
++}
+diff --git a/DatingApp-SPA/src/app/_models/user.ts b/DatingApp-SPA/src/app/_models/user.ts
+new file mode 100644
+index 0000000..f107013
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_models/user.ts
+@@ -0,0 +1,18 @@
++import { Photo } from './photo';
++
++export interface User {
++    id: number;
++    username: string;
++    knownAs: string;
++    age: number;
++    gender: string;
++    created: Date;
++    lastActive: Date;
++    photoUrl: string;
++    city: string;
++    country: string;
++    interests?: string;
++    introduction?: string;
++    lookingFor?: string;
++    photos?: Photo[];
++}
+diff --git a/DatingApp-SPA/src/app/_resolvers/member-detail.resolver.ts b/DatingApp-SPA/src/app/_resolvers/member-detail.resolver.ts
+new file mode 100644
+index 0000000..c360f79
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_resolvers/member-detail.resolver.ts
+@@ -0,0 +1,21 @@
++import { Injectable } from '@angular/core';
++import { User } from '../_models/user';
++import { Resolve, Router, ActivatedRouteSnapshot } from '@angular/router';
++import { AlertifyService } from '../_services/alertify.service';
++import { of, Observable } from 'rxjs';
++import { UserService } from '../_services/user.service';
++import { catchError } from 'rxjs/operators';
++
++@Injectable()
++export class MemberDetailResolver implements Resolve<User> {
++    constructor(private userService: UserService, private router: Router, private alertify: AlertifyService) {}
++    resolve(route: ActivatedRouteSnapshot): Observable<User> {
++        return this.userService.getUser(route.params.id).pipe(
++            catchError(error => {
++                this.alertify.error('Problem retrieving data');
++                this.router.navigate(['/members']);
++                return of(null);
++            })
++        );
++    }
++}
+diff --git a/DatingApp-SPA/src/app/_resolvers/member-list.resolver.ts b/DatingApp-SPA/src/app/_resolvers/member-list.resolver.ts
+new file mode 100644
+index 0000000..ef721b2
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_resolvers/member-list.resolver.ts
+@@ -0,0 +1,21 @@
++import { Injectable } from '@angular/core';
++import { User } from '../_models/user';
++import { Resolve, Router, ActivatedRouteSnapshot } from '@angular/router';
++import { AlertifyService } from '../_services/alertify.service';
++import { of, Observable } from 'rxjs';
++import { UserService } from '../_services/user.service';
++import { catchError } from 'rxjs/operators';
++
++@Injectable()
++export class MemberListResolver implements Resolve<User[]> {
++    constructor(private userService: UserService, private router: Router, private alertify: AlertifyService) {}
++    resolve(route: ActivatedRouteSnapshot): Observable<User[]> {
++        return this.userService.getUsers().pipe(
++            catchError(error => {
++                this.alertify.error('Problem retrieving data');
++                this.router.navigate(['/home']);
++                return of(null);
++            })
++        );
++    }
++}
+diff --git a/DatingApp-SPA/src/app/_services/auth.service.ts b/DatingApp-SPA/src/app/_services/auth.service.ts
+index eb138f0..9881bf6 100644
+--- a/DatingApp-SPA/src/app/_services/auth.service.ts
++++ b/DatingApp-SPA/src/app/_services/auth.service.ts
+@@ -2,19 +2,20 @@ import { Injectable } from '@angular/core';
+ import { HttpClient } from '@angular/common/http';
+ import { map } from 'rxjs/operators';
+ import { JwtHelperService } from '@auth0/angular-jwt';
++import { environment } from 'src/environments/environment';
+ 
+ @Injectable({
+   providedIn: 'root'
+ })
+ export class AuthService {
+-  baseUrl = 'http://localhost:5000/api/auth/';
++  baseUrl = `${environment.apiUrl}auth/`;
+   jwtHelper = new JwtHelperService();
+   decodedToken: any;
+ 
+ constructor(private http: HttpClient) { }
+ 
+ login(model: any) {
+-  return this.http.post(this.baseUrl + 'login', model).pipe(
++  return this.http.post(`${this.baseUrl}login`, model).pipe(
+       map((response: any) => {
+         const user = response;
+         if (user) {
+@@ -26,7 +27,7 @@ login(model: any) {
+   }
+ 
+   register(model: any) {
+-    return this.http.post(this.baseUrl + 'register', model);
++    return this.http.post(`${this.baseUrl}register`, model);
+   }
+ 
+   loggedIn() {
+diff --git a/DatingApp-SPA/src/app/_services/user.service.spec.ts b/DatingApp-SPA/src/app/_services/user.service.spec.ts
+new file mode 100644
+index 0000000..79eb548
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_services/user.service.spec.ts
+@@ -0,0 +1,16 @@
++/* tslint:disable:no-unused-variable */
++
++import { TestBed, async, inject } from '@angular/core/testing';
++import { UserService } from './user.service';
++
++describe('Service: User', () => {
++  beforeEach(() => {
++    TestBed.configureTestingModule({
++      providers: [UserService]
++    });
++  });
++
++  it('should ...', inject([UserService], (service: UserService) => {
++    expect(service).toBeTruthy();
++  }));
++});
+diff --git a/DatingApp-SPA/src/app/_services/user.service.ts b/DatingApp-SPA/src/app/_services/user.service.ts
+new file mode 100644
+index 0000000..6e3c014
+--- /dev/null
++++ b/DatingApp-SPA/src/app/_services/user.service.ts
+@@ -0,0 +1,22 @@
++import { Injectable } from '@angular/core';
++import { environment } from 'src/environments/environment';
++import { Observable } from 'rxjs';
++import { User } from '../_models/user';
++import { HttpClient, HttpHeaders } from '@angular/common/http';
++
++@Injectable({
++    providedIn: 'root'
++})
++export class UserService {
++    baseUrl = environment.apiUrl;
++
++    constructor(private http: HttpClient) {}
++
++    getUsers(): Observable<User[]> {
++        return this.http.get<User[]>(`${this.baseUrl}users`);
++    }
++
++    getUser(id: number): Observable<User> {
++        return this.http.get<User>(`${this.baseUrl}users/${id}`);
++    }
++}
+diff --git a/DatingApp-SPA/src/app/app.module.ts b/DatingApp-SPA/src/app/app.module.ts
+index 3578383..221feac 100644
+--- a/DatingApp-SPA/src/app/app.module.ts
++++ b/DatingApp-SPA/src/app/app.module.ts
+@@ -1,8 +1,10 @@
+-import { BrowserModule } from '@angular/platform-browser';
++import { BrowserModule, HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+ import { NgModule } from '@angular/core';
+ import { FormsModule } from '@angular/forms';
+ import { RouterModule } from '@angular/router';
+-import { BsDropdownModule } from 'ngx-bootstrap';
++import { BsDropdownModule, TabsModule } from 'ngx-bootstrap';
++import { JwtModule } from '@auth0/angular-jwt';
++import { NgxGalleryModule } from 'ngx-gallery';
+ 
+ import { AppComponent } from './app.component';
+ import { HttpClientModule } from '@angular/common/http';
+@@ -11,11 +13,25 @@ import { AuthService } from './_services/auth.service';
+ import { HomeComponent } from './home/home.component';
+ import { RegisterComponent } from './register/register.component';
+ import { ErrorInterceptorProvider } from './_services/error.interceptor';
+-import { MemberListComponent } from './member-list/member-list.component';
++import { MemberListComponent } from './members/member-list/member-list.component';
+ import { ListsComponent } from './lists/lists.component';
+ import { MessagesComponent } from './messages/messages.component';
+ import { appRoutes } from './routes';
++import { MemberCardComponent } from './members/member-card/member-card.component';
++import { MemberDetailComponent } from './members/member-detail/member-detail.component';
++import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
++import { MemberListResolver } from './_resolvers/member-list.resolver';
+ 
++export function tokenGetter() {
++   return localStorage.getItem('token');
++}
++
++export class CustomHammerConfig extends HammerGestureConfig  {
++   overrides = {
++      pinch: { enable: false },
++      rotate: { enable: false }
++   };
++}
+ 
+ @NgModule({
+    declarations: [
+@@ -25,18 +41,32 @@ import { appRoutes } from './routes';
+       RegisterComponent,
+       MemberListComponent,
+       ListsComponent,
+-      MessagesComponent
++      MessagesComponent,
++      MemberCardComponent,
++      MemberDetailComponent
+    ],
+    imports: [
+       BrowserModule,
+       HttpClientModule,
+       FormsModule,
+       BsDropdownModule.forRoot(),
+-      RouterModule.forRoot(appRoutes)
++      TabsModule.forRoot(),
++      RouterModule.forRoot(appRoutes),
++      NgxGalleryModule,
++      JwtModule.forRoot({
++         config: {
++            tokenGetter,
++            whitelistedDomains: ['localhost:5000'],
++            blacklistedRoutes: ['localhost:5000/api/auth']
++         }
++      })
+    ],
+    providers: [
+       AuthService,
+-      ErrorInterceptorProvider
++      ErrorInterceptorProvider,
++      MemberDetailResolver,
++      MemberListResolver,
++      { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
+    ],
+    bootstrap: [
+       AppComponent
+diff --git a/DatingApp-SPA/src/app/member-list/member-list.component.html b/DatingApp-SPA/src/app/member-list/member-list.component.html
+deleted file mode 100644
+index 7459953..0000000
+--- a/DatingApp-SPA/src/app/member-list/member-list.component.html
++++ /dev/null
+@@ -1,3 +0,0 @@
+-<p>
+-  member-list works!
+-</p>
+diff --git a/DatingApp-SPA/src/app/member-list/member-list.component.ts b/DatingApp-SPA/src/app/member-list/member-list.component.ts
+deleted file mode 100644
+index f486465..0000000
+--- a/DatingApp-SPA/src/app/member-list/member-list.component.ts
++++ /dev/null
+@@ -1,15 +0,0 @@
+-import { Component, OnInit } from '@angular/core';
+-
+-@Component({
+-  selector: 'app-member-list',
+-  templateUrl: './member-list.component.html',
+-  styleUrls: ['./member-list.component.css']
+-})
+-export class MemberListComponent implements OnInit {
+-
+-  constructor() { }
+-
+-  ngOnInit() {
+-  }
+-
+-}
+diff --git a/DatingApp-SPA/src/app/members/member-card/member-card.component.css b/DatingApp-SPA/src/app/members/member-card/member-card.component.css
+new file mode 100644
+index 0000000..911bd26
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-card/member-card.component.css
+@@ -0,0 +1,36 @@
++.card:hover img {
++    transform: scale(1.2,1.2);
++    transition-duration: 500ms;
++    transition-timing-function: ease-in-out;
++    opacity: 0.7;
++}
++
++.card img {
++    transform: scale(1.0, 1.0);
++    transition-duration: 500ms;
++    transition-timing-function: ease-in-out;
++}
++
++.card-image-wrapper {
++    overflow: hidden;
++    position: relative;
++}
++
++
++.member-icons {
++    position: absolute;
++    bottom: -30%;
++    left: 0;
++    right: 0;
++    margin-right: auto;
++    margin-left: auto;
++    opacity: 0;
++}
++
++.animate {
++    transition: all 0.3s ease-in-out;
++}
++.card-image-wrapper:hover .member-icons {
++    bottom: 0;
++    opacity: 1;
++}
+\ No newline at end of file
+diff --git a/DatingApp-SPA/src/app/members/member-card/member-card.component.html b/DatingApp-SPA/src/app/members/member-card/member-card.component.html
+new file mode 100644
+index 0000000..841184e
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-card/member-card.component.html
+@@ -0,0 +1,16 @@
++<div class="card mb-4">
++  <div class="card-image-wrapper">
++    <img class="card-img-top" src="{{user.photoUrl}}" alt="{{user.knownAs}}">
++    <ul class="list-inline member-icons animate text-center">
++      <li class="list-inline-item"><button class="btn btn-primary" [routerLink]="['/members/', user.id]"><i class="fa fa-user"></i></button></li>
++      <li class="list-inline-item"><button class="btn btn-primary"><i class="fa fa-heart"></i></button></li>
++      <li class="list-inline-item"><button class="btn btn-primary"><i class="fa fa-envelope"></i></button></li>
++    </ul>
++  </div>
++  <div class="card-body p-1">
++    <h6 class="card-title text-center mb-1"><i class="fa fa-user"></i>
++      {{user.knownAs}}, {{user.age}}
++    </h6>
++    <p class="card-text text-muted text-center">{{user.city}}</p>
++  </div>
++</div>
+\ No newline at end of file
+diff --git a/DatingApp-SPA/src/app/members/member-card/member-card.component.spec.ts b/DatingApp-SPA/src/app/members/member-card/member-card.component.spec.ts
+new file mode 100644
+index 0000000..4aebb3a
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-card/member-card.component.spec.ts
+@@ -0,0 +1,28 @@
++/* tslint:disable:no-unused-variable */
++import { async, ComponentFixture, TestBed } from '@angular/core/testing';
++import { By } from '@angular/platform-browser';
++import { DebugElement } from '@angular/core';
++
++import { MemberCardComponent } from './member-card.component';
++
++describe('MemberCardComponent', () => {
++  let component: MemberCardComponent;
++  let fixture: ComponentFixture<MemberCardComponent>;
++
++  beforeEach(async(() => {
++    TestBed.configureTestingModule({
++      declarations: [ MemberCardComponent ]
++    })
++    .compileComponents();
++  }));
++
++  beforeEach(() => {
++    fixture = TestBed.createComponent(MemberCardComponent);
++    component = fixture.componentInstance;
++    fixture.detectChanges();
++  });
++
++  it('should create', () => {
++    expect(component).toBeTruthy();
++  });
++});
+diff --git a/DatingApp-SPA/src/app/members/member-card/member-card.component.ts b/DatingApp-SPA/src/app/members/member-card/member-card.component.ts
+new file mode 100644
+index 0000000..e2ec0da
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-card/member-card.component.ts
+@@ -0,0 +1,17 @@
++import { Component, OnInit, Input } from '@angular/core';
++import { User } from 'src/app/_models/user';
++
++@Component({
++  selector: 'app-member-card',
++  templateUrl: './member-card.component.html',
++  styleUrls: ['./member-card.component.css']
++})
++export class MemberCardComponent implements OnInit {
++  @Input() user: User;
++  
++  constructor() { }
++
++  ngOnInit() {
++  }
++
++}
+diff --git a/DatingApp-SPA/src/app/members/member-detail/member-detail.component.css b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.css
+new file mode 100644
+index 0000000..dc18131
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.css
+@@ -0,0 +1,15 @@
++.img-thumbnail {
++    margin: 25px;
++    width: 85%;
++    height: 85%;
++}
++
++.card-body {
++    padding: 0 25px;
++}
++
++.card-footer {
++    padding: 10 15px;
++    background-color: #fff;
++    border-top: none;
++}
+\ No newline at end of file
+diff --git a/DatingApp-SPA/src/app/members/member-detail/member-detail.component.html b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.html
+new file mode 100644
+index 0000000..fe984b9
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.html
+@@ -0,0 +1,57 @@
++<div class="container mt-4">
++  <div class="row">
++    <div class="col-sm-4">
++      <div class="card">
++        <img class="card-img-top img-thumbnail" src="{{user.photoUrl}}" alt="{{user.knownAs}}">
++        <div class="card-body">
++          <div>
++            <strong>
++              Location:
++            </strong>
++            <p>{{user.city}}, {{user.country}}</p>
++          </div>
++          <div>
++            <strong>Age:</strong>
++            <p>{{user.age}}</p>
++          </div>
++          <div>
++            <strong>Last Active:</strong>
++            <p>{{user.lastActive}}</p>
++          </div>
++          <div>
++            <strong>Member since:</strong>
++            <p>{{user.created}}</p>
++          </div>
++        </div>
++        <div class="card-footer">
++          <div class="btn-group d-flex">
++            <button class="btn btn-primary w-100">Like</button>
++            <button class="btn btn-success w-100">Message</button>
++          </div>
++        </div>
++      </div>
++    </div>
++    <div class="col-sm-8">
++      <div class="tab-panel">
++        <tabset class="member-tabset"> 
++          <tab heading="About {{user.knownAs}}">
++            <h4>Description</h4>
++            <p>{{user.introduction}}</p>
++            <h4>Looking For</h4>
++            <p>{{user.lookingFor}}</p>
++          </tab>
++          <tab heading="Interests">
++            <h4>Interests</h4>
++            <p>{{user.interests}}</p>
++          </tab> 
++          <tab heading="Photos">
++              <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
++          </tab>
++          <tab heading="Messages">
++            <p>Messages will go here</p>
++          </tab>
++        </tabset> 
++      </div>
++    </div>
++  </div>
++</div>
+\ No newline at end of file
+diff --git a/DatingApp-SPA/src/app/members/member-detail/member-detail.component.spec.ts b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.spec.ts
+new file mode 100644
+index 0000000..69dc0b8
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.spec.ts
+@@ -0,0 +1,28 @@
++/* tslint:disable:no-unused-variable */
++import { async, ComponentFixture, TestBed } from '@angular/core/testing';
++import { By } from '@angular/platform-browser';
++import { DebugElement } from '@angular/core';
++
++import { MemberDetailComponent } from './member-detail.component';
++
++describe('MemberDetailComponent', () => {
++  let component: MemberDetailComponent;
++  let fixture: ComponentFixture<MemberDetailComponent>;
++
++  beforeEach(async(() => {
++    TestBed.configureTestingModule({
++      declarations: [ MemberDetailComponent ]
++    })
++    .compileComponents();
++  }));
++
++  beforeEach(() => {
++    fixture = TestBed.createComponent(MemberDetailComponent);
++    component = fixture.componentInstance;
++    fixture.detectChanges();
++  });
++
++  it('should create', () => {
++    expect(component).toBeTruthy();
++  });
++});
+diff --git a/DatingApp-SPA/src/app/members/member-detail/member-detail.component.ts b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.ts
+new file mode 100644
+index 0000000..45c7fc8
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-detail/member-detail.component.ts
+@@ -0,0 +1,60 @@
++import { Component, OnInit } from '@angular/core';
++import { User } from 'src/app/_models/user';
++import { UserService } from 'src/app/_services/user.service';
++import { AlertifyService } from 'src/app/_services/alertify.service';
++import { ActivatedRoute } from '@angular/router';
++import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
++import { sample } from 'rxjs/operators';
++
++@Component({
++  selector: 'app-member-detail',
++  templateUrl: './member-detail.component.html',
++  styleUrls: ['./member-detail.component.css']
++})
++export class MemberDetailComponent implements OnInit {
++  user: User;
++  galleryOptions: NgxGalleryOptions[];
++  galleryImages: NgxGalleryImage[];
++
++  constructor(private usÁerService: UserService, private alertify: AlertifyService, private route: ActivatedRoute) { }
++
++  ngOnInit() {
++    this.route.data.subscribe(data => {
++      this.user = data.user;
++    });
++
++    this.galleryOptions = [
++      {
++        width: '500px',
++        height: '500px',
++        imagePercent: 100,
++        thumbnailsColumns: 4,
++        imageAnimation: NgxGalleryAnimation.Slide,
++        preview: false
++      }
++    ];
++    this.galleryImages = this.getImages();
++  }
++
++  getImages() {
++    const imageUrls = [];
++    for (const photo of this.user.photos) {
++      imageUrls.push(
++        {
++          small: photo.url,
++          medium: photo.url,
++          big: photo.url,
++          description: photo.description
++        }
++      );
++    }
++    return imageUrls;
++  }
++  // loadUser() {
++  //   this.userService.getUser(this.route.snapshot.params.id).subscribe((user: User) => {
++  //     this.user = user;
++  //   }, error => {
++  //     this.alertify.error(error);
++  //   });
++  // }
++}
+diff --git a/DatingApp-SPA/src/app/member-list/member-list.component.css b/DatingApp-SPA/src/app/members/member-list/member-list.component.css
+similarity index 100%
+rename from DatingApp-SPA/src/app/member-list/member-list.component.css
+rename to DatingApp-SPA/src/app/members/member-list/member-list.component.css
+diff --git a/DatingApp-SPA/src/app/members/member-list/member-list.component.html b/DatingApp-SPA/src/app/members/member-list/member-list.component.html
+new file mode 100644
+index 0000000..1ecc037
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-list/member-list.component.html
+@@ -0,0 +1,7 @@
++<div class="container mt-5">
++  <div class="row">
++    <div *ngFor="let user of users" class="col-lg-2 col-md-3 col-sm-6">
++      <app-member-card [user]="user"></app-member-card>
++    </div>
++  </div>
++</div>
+\ No newline at end of file
+diff --git a/DatingApp-SPA/src/app/member-list/member-list.component.spec.ts b/DatingApp-SPA/src/app/members/member-list/member-list.component.spec.ts
+similarity index 100%
+rename from DatingApp-SPA/src/app/member-list/member-list.component.spec.ts
+rename to DatingApp-SPA/src/app/members/member-list/member-list.component.spec.ts
+diff --git a/DatingApp-SPA/src/app/members/member-list/member-list.component.ts b/DatingApp-SPA/src/app/members/member-list/member-list.component.ts
+new file mode 100644
+index 0000000..55d9d68
+--- /dev/null
++++ b/DatingApp-SPA/src/app/members/member-list/member-list.component.ts
+@@ -0,0 +1,33 @@
++import { Component, OnInit } from '@angular/core';
++import { UserService } from '../../_services/user.service';
++import { AlertifyService } from '../../_services/alertify.service';
++import { User } from '../../_models/user';
++import { ActivatedRoute } from '@angular/router';
++
++@Component({
++  selector: 'app-member-list',
++  templateUrl: './member-list.component.html',
++  styleUrls: ['./member-list.component.css']
++})
++export class MemberListComponent implements OnInit {
++  users: User[];
++
++  constructor(private userService: UserService, private alertify: AlertifyService, 
++              private route: ActivatedRoute) { }
++
++  ngOnInit() {
++    this.route.data.subscribe(
++      data => {
++        this.users = data.users;
++      }
++    )
++  }
++
++  // loadUsers() {
++  //   this.userService.getUsers().subscribe((users: User[]) => {
++  //     this.users = users;
++  //   }, error => {
++  //     this.alertify.error(error);
++  //   });
++  // }
++}
+diff --git a/DatingApp-SPA/src/app/routes.ts b/DatingApp-SPA/src/app/routes.ts
+index 061df20..2909d93 100644
+--- a/DatingApp-SPA/src/app/routes.ts
++++ b/DatingApp-SPA/src/app/routes.ts
+@@ -1,9 +1,12 @@
+ import { Routes } from '@angular/router';
+ import { HomeComponent } from './home/home.component';
+-import { MemberListComponent } from './member-list/member-list.component';
++import { MemberListComponent } from './members/member-list/member-list.component';
+ import { MessagesComponent } from './messages/messages.component';
+ import { ListsComponent } from './lists/lists.component';
+ import { AuthGuard } from './_guards/auth.guard';
++import { MemberDetailComponent } from './members/member-detail/member-detail.component';
++import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
++import { MemberListResolver } from './_resolvers/member-list.resolver';
+ 
+ export const appRoutes: Routes = [
+     { path: '', component: HomeComponent},
+@@ -12,7 +15,10 @@ export const appRoutes: Routes = [
+         runGuardsAndResolvers: 'always',
+         canActivate: [AuthGuard],
+         children: [
+-            { path: 'members', component: MemberListComponent},
++            { path: 'members', component: MemberListComponent, 
++                resolve: {users: MemberListResolver}},
++            { path: 'members/:id', component: MemberDetailComponent,
++                resolve: {user: MemberDetailResolver}},
+             { path: 'messages', component: MessagesComponent},
+             { path: 'lists', component: ListsComponent}
+         ]
+diff --git a/DatingApp-SPA/src/environments/environment.ts b/DatingApp-SPA/src/environments/environment.ts
+index 7b4f817..a37f064 100644
+--- a/DatingApp-SPA/src/environments/environment.ts
++++ b/DatingApp-SPA/src/environments/environment.ts
+@@ -3,7 +3,8 @@
+ // The list of file replacements can be found in `angular.json`.
+ 
+ export const environment = {
+-  production: false
++  production: false,
++  apiUrl: 'http://localhost:5000/api/'
+ };
+ 
+ /*
+diff --git a/DatingApp-SPA/src/styles.css b/DatingApp-SPA/src/styles.css
+index 3ae0643..50c1cc2 100644
+--- a/DatingApp-SPA/src/styles.css
++++ b/DatingApp-SPA/src/styles.css
+@@ -5,3 +5,52 @@
+ @import '../node_modules/alertifyjs/build/css/alertify.min.css';
+ @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+ 
++.tab-panel {
++    border: 1px solid #ddd;
++    padding: 10px;
++    border-radius: 4px;
++}
++
++.nav-tabs > li.open,
++.member-tabset > .nav-tabs > li:hover {
++    border-bottom: 4px solid #fbcdcf;
++}
++
++.member-tabset > .nav-tabs > li.open > a,
++.member-tabset > .nav-tabs > li:hover > a {
++    border: 0;
++    background: none !important;
++    color: #333333;
++}
++
++.member-tabset > .nav-tabs > li.open > a > i,
++.member-tabset > .nav-tabs > li:hover > a > i {
++    color: #a6a6a6;
++}
++
++.member-tabset > .nav-tabs > li.open .dropdown-menu,
++.member-tabset > .nav-tabs > li:hover .dropdown-menu {
++    margin-top: 0px;
++}
++
++.member-tabset > .nav-tabs > li.active {
++    border-bottom: 4px solid #e95420;
++    position: relative;
++}
++
++.member-tabset > .nav-tabs > li.active > a {
++    border: 0 !important;
++    color: #333333;
++}
++
++.member-tabset > .nav-tabs > li.active > a > i {
++    color: #404040;
++}
++
++.member-tabset > .tab-content {
++    margin-top: -3px;
++    background-color: #fff;
++    border: 0;
++    border-top: 1px solid #eee;
++    padding: 15px 0;
++}
+diff --git a/DatingApp-SPA/tslint.json b/DatingApp-SPA/tslint.json
+index c8d70f1..0c3a843 100644
+--- a/DatingApp-SPA/tslint.json
++++ b/DatingApp-SPA/tslint.json
+@@ -1,6 +1,7 @@
+ {
+   "extends": "tslint:recommended",
+   "rules": {
++    "no-string-literal": false,
+     "array-type": false,
+     "arrow-parens": false,
+     "deprecation": {
